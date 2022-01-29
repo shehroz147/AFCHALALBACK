@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,300" rel="stylesheet" type="text/css">
+    <style>
+        /*body {*/
+        /*    -webkit-font-smoothing: antialiased;*/
+        /*    -webkit-text-size-adjust: none;*/
+        /*    width: 100% !important;*/
+        /*    height: 100%;*/
+        /*    background-color:#eeeeee!important;*/
+        /*}*/
+
+        @media only screen and (max-width: 695px) {
+            .title {
+                font-size: 5vw !important;
+            }
+
+            .subtitle {
+                font-size: 4vw !important;
+            }
+        }
+
+        .image-forgot {
+            margin: 34px 302px 0px 301px;
+            width: 91px;
+            height: 98px;
+            background: transparent url('{{assetsPath}}/forgot.png') 0% 0% no-repeat;
+            opacity: 1;
+        }
+
+        .image-logo {
+            margin: 48px 279px 0px 278px;
+            width: 138px;
+            height: 66px;
+            background: transparent url('{{assetsPath}}/OnlineBattleground.png') 0% 0% no-repeat
+        }
+
+        .body-background {
+            margin-top: 0px;
+            margin-left: 212px;
+            width: 695px;
+            height: 737px;
+            background: #1A1A1A 0% 0% no-repeat padding-box;
+            border: 1px solid #FFFFFF4D;
+            border-radius: 8px;
+            opacity: 1;
+        }
+
+        .reset_password {
+            margin-top: 40px;
+            margin-left: 279px;
+            width: 173px;
+            height: 32px;
+            text-align: left;
+            font-size: 20px;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 0.9;
+        }
+
+        .reset_description {
+            margin-top: 16px;
+            margin-left: 100px;
+            width: 494px;
+            height: 61px;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 0.7;
+        }
+
+        .reset_btn {
+            margin-top: 70px;
+            margin-left: 209px;
+            width: 277px;
+            height: 42px;
+            background: #F26826 0% 0% no-repeat padding-box;
+            border-radius: 4px;
+            opacity: 1;
+        }
+
+        .reset_text {
+            margin-top: 10px;
+            width: 118px;
+            height: 21px;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 0.16px;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+    </style>
+
+<body>
+<div class=" body-background">
+    <img class="image-logo">
+    <img class="image-forgot">
+    <div class="reset_password">
+        Reset Password
+    </div>
+    <div class="reset_description">We're sending you this because you have successfully created an account on out website
+    </div>
+    <button class="reset_btn" id="custom-button" type="button">
+        <a class="reset_text" href="{{link}}">Reset Password</a>
+    </button>
+    <br>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "afcbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shehroz147/afcBackend.git"
+  },
+  "author": "shehroz virk <shehroz.virk147@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shehroz147/afcBackend/issues"
+  },
+  "homepage": "https://github.com/shehroz147/afcBackend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "epdq": "^0.3.1",
+    "express": "^4.17.2",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.1.5",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "stripe": "^8.195.0"
+  }
+}
