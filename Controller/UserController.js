@@ -61,18 +61,20 @@ exports.signup = async (req, res, next) => {
     try 
     {
         let request = req.body;
-    if (!request.email || !request.password) {
+        const email = request.email;
+        const password = request.password;
+    if (!email || !password) {
         return res.status(400).json("Missing Email or Password");
     }
     //checking if the email entered by user already exists or not
-    let modelUser = await UserHelper.foundUserByEmail(request.email.toLowerCase());
+    let modelUser = await UserHelper.foundUserByEmail(email.toLowerCase());
     if (!(modelUser === null)) {
         return res.status(400).json("User already exist with this email");
     }
-    let password = await UserHelper.bcryptPassword(request.password);
+    let password_ = await UserHelper.bcryptPassword(password);
     //adding user to database
-    let user = await UserHelper.createUser(request.email.toLowerCase(), password,'user');
-    let email = await EmailHelper.sendSignUpEmail(request.email);
+    let user = await UserHelper.createUser(email.toLowerCase(), password_,'user');
+    await EmailHelper.sendSignUpEmail(email);
     return res.status(200).json(user);
 }
 catch (e) {
