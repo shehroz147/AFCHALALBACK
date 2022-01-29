@@ -58,6 +58,7 @@ exports.signup = async (req, res, next) => {
     //Signup function to add a new user  when the user provides required info
     let request = req.body;
     //checking required info
+    try{
     if (!req.body.email || !req.body.password) {
         return res.status(400).json("Missing Email or Password");
     }
@@ -71,6 +72,11 @@ exports.signup = async (req, res, next) => {
     let user = await UserHelper.createUser(request.email.toLowerCase(), password,'user');
     let email = await EmailHelper.sendSignUpEmail(request.email);
     return res.status(200).json(user);
+}
+catch (e) {
+            res.status(500).json({ message: "something went wrong in Add to Cart" });
+            console.log(e);
+        }
 };
 exports.getProducts = async(req,res)=>{
     let request = req.body;
